@@ -20,6 +20,7 @@ public class Bus {
 				mustExit = passengers.get(i);
 				if (mustExit.getPlanned() == mustExit.getVisited()) {
 					passengers.remove(i);
+					i--;
 				}
 			}
 		}
@@ -58,11 +59,11 @@ public class Bus {
 	}
 
 	public void transferPassengers(Bus otherBus, String[] passengerNames) {
-		for (int i = 0; i < passengerNames.length; i++) {
-			for (int j = 0; j < passengers.size(); j++) {
-				if (passengerNames[i] == passengers.get(j).getName()) {
-					otherBus.enterBus(passengers.get(j));
-					passengers.remove(j);
+		for (int i = 0; i < passengers.size(); i++) {
+			for (int j = 0; j <  passengerNames.length; j++) {
+				if (passengerNames[i].equals(passengers.get(j).getName())) {
+					otherBus.enterBus(passengers.get(i));
+					passengers.remove(i);
 					break;
 				}
 			}
