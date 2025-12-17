@@ -61,7 +61,7 @@ public class Bus {
 	public void transferPassengers(Bus otherBus, String[] passengerNames) {
 		for (int i = 0; i < passengers.size(); i++) {
 			for (int j = 0; j <  passengerNames.length; j++) {
-				if (passengerNames[i].equals(passengers.get(j).getName())) {
+				if (passengerNames[j].equals(passengers.get(i).getName())) {
 					otherBus.enterBus(passengers.get(i));
 					passengers.remove(i);
 					break;
