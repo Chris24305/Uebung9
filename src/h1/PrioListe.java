@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PrioListe {
 	
-	public ArrayList<Patient> myList = new ArrayList<>();
+	private ArrayList<Patient> myList = new ArrayList<>();
 	
 	public void addPatient(Patient p) {
 		
